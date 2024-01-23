@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\DespesaController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -24,3 +25,10 @@ Route::middleware('auth:sanctum')->get('/teste', function (Request $request) {
     return ['user' => $request->user(), 'message' => "Aeeee"];
 });
 
+Route::middleware('auth:sanctum')->controller(DespesaController::class)->prefix('despesas')->group(function () {
+    Route::get('/', 'index');
+    Route::post('/', 'create');
+    Route::get('/{id}', 'show');
+    Route::patch('/{id}', 'update');
+    Route::delete('/{id}', 'destroy');
+});

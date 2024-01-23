@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Retorna o relacionamento hasMany com a tabela Despesa
+     */
+    public function despesa()
+    {
+        return $this->hasMany(Despesa::class);
+    }
 }
