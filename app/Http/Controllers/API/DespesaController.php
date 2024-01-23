@@ -29,7 +29,7 @@ class DespesaController extends Controller
     /**
      * Cria despesa
      */
-    public function create(DespesaCreateRequest $request)
+    public function store(DespesaCreateRequest $request)
     {
         $input = $request->all();
         $input['user_id'] = Auth::id();

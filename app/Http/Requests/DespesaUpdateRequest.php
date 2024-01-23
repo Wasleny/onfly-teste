@@ -13,7 +13,7 @@ class DespesaUpdateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        $despesa = Despesa::where('id', $this->id)->first();
+        $despesa = Despesa::where('id', $this->despesa)->first();
         return $this->user()->can('update', $despesa);
     }
 

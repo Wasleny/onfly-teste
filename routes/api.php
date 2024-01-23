@@ -21,14 +21,4 @@ use Illuminate\Validation\ValidationException;
 
 Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::middleware('auth:sanctum')->get('/teste', function (Request $request) {
-    return ['user' => $request->user(), 'message' => "Aeeee"];
-});
-
-Route::middleware('auth:sanctum')->controller(DespesaController::class)->prefix('despesas')->group(function () {
-    Route::get('/', 'index');
-    Route::post('/', 'create');
-    Route::get('/{id}', 'show');
-    Route::patch('/{id}', 'update');
-    Route::delete('/{id}', 'destroy');
-});
+Route::middleware('auth:sanctum')->apiResource('despesas', DespesaController::class);
