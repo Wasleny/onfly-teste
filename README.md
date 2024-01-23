@@ -4,6 +4,8 @@ Projeto desenvolvido como teste técnico no processo seletivo da Onfly. O projet
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)
 
+---
+
 ### Tecnologias utilizadas
 - Laravel 10
 - PHP
