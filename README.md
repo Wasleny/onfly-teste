@@ -9,22 +9,26 @@ Projeto desenvolvido como teste técnico no processo seletivo da Onfly. O projet
 - PHP
 - Docker
 
+---
+
 ### Como rodar o projeto
 - Pré-requisito: ter Docker instalado, composer instalado
 - Clone o projeto do github
-- Rode comando composer install
-- Rode o comando: ./vendor/bin/sail up (para subir a aplicação)
-- Rode o comando: ./vendor/bin/sail artisan test (para rodar os testes)
+- Rode comando `composer install`
+- Rode o comando: `./vendor/bin/sail up` (para subir a aplicação)
+- Rode o comando: `./vendor/bin/sail artisan test` (para rodar os testes)
 - Para ver o email: configure o .env
-- Para acessar a rota login é necessário informar: emaail, password e device_name
+- Para acessar a rota login é necessário informar: email, password e device_name
 
 - Usuários criados:
-    -Maria
-        -email: maria@example.com
-        -senha: password
-    -João
-        -email: joao@example.com
-        -senha: password
+  1. Maria
+     + email: maria@example.com
+     + senha: password
+  3. João
+     + email: joao@example.com
+     + senha: password
+
+---
 
 ### Processo de investigação para o desenvolvimento
 
