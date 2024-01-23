@@ -75,7 +75,7 @@ class DespesaController extends Controller
             $despesa->delete();
             $despesa->save();
 
-            return response(['message' => 'Despesa excluída com sucesso.']);
+            return response(['message' => 'Despesa removida com sucesso.']);
         }
 
         abort(403);

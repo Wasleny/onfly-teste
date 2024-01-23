@@ -26,6 +26,6 @@ class LoginController extends Controller
             ]);
         }
 
-        return response($user->createToken($request->device_name)->plainTextToken)->header('Content-Type', 'application/json');;
+        return response(['token' => $user->createToken($request->device_name)->plainTextToken])->header('Content-Type', 'application/json');;
     }
 }
