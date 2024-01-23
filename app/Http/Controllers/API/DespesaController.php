@@ -7,7 +7,7 @@ use App\Http\Requests\DespesaCreateRequest;
 use App\Http\Requests\DespesaUpdateRequest;
 use App\Http\Resources\DespesaResource;
 use App\Models\Despesa;
-use Illuminate\Http\Request;
+use App\Notifications\DespesaCadastrada;
 use Illuminate\Support\Facades\Auth;
 
 class DespesaController extends Controller
@@ -35,6 +35,7 @@ class DespesaController extends Controller
         $input['user_id'] = Auth::id();
 
         $despesa = Despesa::create($input);
+        Auth::user()->notify(new DespesaCadastrada($despesa));
 
         return new DespesaResource($despesa);
     }
